@@ -1,0 +1,23 @@
+1) when you upload the file in the chrome window, automate.py get's triggered, which calls tradehistories.py and submit_data_drop.py 
+2) Allow me to explain it to you what tradehistories.py does 
+3) it opens the trade history file folder (where compliance files are dropped everyday manually) located C:\Users\Administrator\Desktop\trade_history_files, then it reads the name of all the files in it
+picks the file with the most recent date (just look in the folder to see what I'm refering to). 
+4) now please note that, the name of the file needs to be in a correct format of "Compliance{ddmmyyyy}", date will be when the file is getting used for the first time. 
+5) inside the file the order of the columns needs to remain same (check column maping in tradehistories.py for exact order). 
+6) after it picks up the file note that the compliance file doesn't have userID, team name, and the name of the traders that are not alloted stragies. 
+7) for this we have merged, concated and performed several append methods. 
+8) we also create userID2 which can be used by sandeep/the front end guy to do some operation on it, so that userID remains unchanged and userID2 can do the needful
+9) then following that we define a function which can append our data to mongoDB server, which is pretty easy. 
+10) just before this we also created grouped Data, which is in JSON format. grouped data is different from it's before the operation version as it pairs all the strategies that have the same userID. 
+11) our function returns max date as, it's later used in the automate.py file to determine what would be displayed in the msg box when you submit the strategies. 
+12) when the traders submit their strategies, then their data gets uploaded in submit data collection of pacefin database, which is later in the day used by the compliance people, everyday when we 
+upload our strategies the submit_data_drop.py drops all data from submit data drop so that the next day entries are uploaded in a fresh collection. 
+
+13) if you wish to add a new user then update their name in greek file, team name in team name file, and add their id and password in user id password 
+the location to these files is  
+C:\Users\Administrator\Desktop\backend_files 
+
+common mistakes to avoid 
+1) make sure the names/userID/team_name are the same in all the files (Greek, team_name, user_id_password) 
+2) make sure the columns in the compliance file are in the same order as in thse code (see column maping in trade_histories.py) 
+3) make sure the person has the same name in compliance file and in the rest of the file  

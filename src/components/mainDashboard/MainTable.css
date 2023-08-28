@@ -1,0 +1,79 @@
+.css-12q85cb-MuiTableCell-root {
+  color: white !important;
+  background-color: #010819;
+}
+.css-vtdehq-MuiTableCell-root {
+  color: white !important;
+  background-color: #03254c;
+}
+.css-1f7pkcr-MuiTableCell-root,
+.css-dsuxgy-MuiTableCell-root {
+  background-color: #03254c;
+  color: white !important;
+}
+.css-1howxi1-MuiTableCell-root {
+  background-color: #010819;
+  color: white !important;
+}
+.css-d9oaum-MuiSelect-select-MuiInputBase-input-MuiFilledInput-input.MuiSelect-select {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  color: green;
+}
+
+.css-hfi1sa-MuiPaper-root,
+.css-1vqzwsa-MuiPaper-root,
+.css-opgqam-MuiPaper-root {
+  background-color: #010819 !important;
+}
+
+
+.notification {
+  font-size: 1.1rem;
+  position: fixed;
+  top: 2.6rem;
+  right: 0rem;
+  background-color: lightgreen;
+  padding: 0.1rem 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition:transform 1S ease-out;
+  animation-name: slideInRight;
+  animation-duration: 5s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+  }
+  30% {
+    transform: translateX(0);
+  }
+  70%{
+    transform:  translateX(0);
+  }
+  100%{
+    transform:  translateX(100%);
+  }
+}
+
+/* for signIn page */
+
+.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: #03254c !important;
+  background-color: white;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root {
+  color: #03254c !important;
+  background-color: white;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+
+
+
+
